@@ -135,11 +135,12 @@ while True:
     elif v.lower() == 'exit':
         break
 
-## BOOK SEARCH ## 
+## BOOK SEARCH ##
 
 books = [{"title":"how to win friends and influence people", "author": "Dale Carnegie", "genre":"Non-Fiction"}]
 books.append({"title":'Flatland', "author":'Edwin Abbott Abbott', 'genre':'Science Fiction'})
 books.append({"title":"Flatterland", 'author':'Ian Stewart', 'genre':'Science Fiction'})
+
 
 genre = input("What Genre would you like to search for\n")
 print(f"Books with the genre: {genre}")
