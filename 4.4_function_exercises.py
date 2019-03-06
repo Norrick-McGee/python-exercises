@@ -5,12 +5,14 @@ def is_two(num):
     if type(num) == int:
         if num == 2:
             return True
+        else:
+            return False
     else:
         return False
 
 print("if I pass in the string '2': " +str(is_two('2')))
 print("if I pass in the int 2: " +str(is_two(2)))
-print("if I pass in any non-2 integer or any-non integer: " +str(is_two(2)))
+print("if I pass in any non-2 integer or any-non integer: " +str(is_two(3)))
 
 
 def is_vowel(our_char):
@@ -88,3 +90,36 @@ def cumsum(your_list):
     return cumsum
 
 print(cumsum([1,2,3]))
+
+
+#Bonus 1
+def twelveto24(str):
+    if str[-2] == 'p':
+        am_pm = 12
+        str = str.replace('pm', '')
+    else:
+        str = str.replace('am', '')
+
+    str = str.split(':')
+    hour = int(str[0]) + am_pm
+    min = str[1]
+    if hour >= 24:
+        hour -= 24
+    return(f"{hour}:{min}")
+
+
+print(twelveto24('12:22pm'))
+
+
+#Bonus 2
+def col_index(str):
+    str = str.lower()
+    str = list(str)
+    col = 0
+    it = 0
+    for i in str:
+        col += (ord(i) - 96) * (26**it)
+        it +=1
+    return col
+
+print(col_index('aa'))
