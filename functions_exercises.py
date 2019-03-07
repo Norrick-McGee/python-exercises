@@ -44,7 +44,7 @@ def apply_discount(price,discount):
 #7
 def handle_commas(str):
     str = str.replace(",",'')
-    return(float(str))
+    return(int(str))
 
 #8
 def get_letter_grade(grade_as_num):
