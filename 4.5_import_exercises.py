@@ -100,6 +100,8 @@ print(list(it.combinations(['a','b','c'] + ['1','2','3'], 2)))
 
 print(len(list(it.combinations('abcd',2))))
 
+
+####### opens the file, then uses json.load to turn contents of file into a dict
 data = json.load(open('profiles.json'))
 
 total_users = len(data)
